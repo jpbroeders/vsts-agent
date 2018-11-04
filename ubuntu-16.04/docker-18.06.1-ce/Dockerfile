@@ -1,5 +1,7 @@
 FROM microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
+MAINTAINER Jean-Pierre Broeders <github@freelyit.nl>
+
 RUN set -x \
  && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.140.2/vsts-agent-linux-x64-2.140.2.tar.gz -o agent.tgz \
  && mkdir agent \
