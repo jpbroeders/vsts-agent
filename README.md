@@ -1,5 +1,5 @@
-#Microsoft VSTS-Agent
-##Based on microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
+# Microsoft VSTS-Agent
+## Based on microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
 **Including:**
 ..* GitVersion 4.0.0
