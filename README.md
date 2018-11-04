@@ -7,6 +7,7 @@
 
 
 **GitVersion**
+
 Contains the .NET Core version of GitVersion 4.0.0
 
 Application is installed in the following folder: /opt/GitVersion/GitVersion.dll
