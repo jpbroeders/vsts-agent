@@ -18,6 +18,10 @@ RUN apt-get update && apt-get install -y unzip mono-runtime libmono-system-core4
     echo '<configuration><dllmap os="linux" cpu="x86-64" wordsize="64" dll="git2-baa87df" target="/usr/lib/x86_64-linux-gnu/libgit2.so.24" /></configuration>' > \
     /opt/GitVersion/LibGit2Sharp.dll.config
  
+# Install Extra packages
+RUN apt-get install \
+	vim
+ 
 COPY ./start.sh .
 RUN chmod +x start.sh
 
