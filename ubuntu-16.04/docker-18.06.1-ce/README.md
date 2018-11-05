@@ -4,6 +4,7 @@
 
 **Including:**
 * GitVersion 4.0.0
+* VIM
 
 
 **GitVersion**
