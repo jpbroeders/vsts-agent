@@ -20,7 +20,12 @@ RUN apt-get update && apt-get install -y unzip mono-runtime libmono-system-core4
  
 # Install Extra packages
 RUN apt-get install \
-	vim
+    vim
+	
+# Install Pact
+RUN curl -L -o /tmp/pact-1.61.2-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.61.2/pact-1.61.2-linux-x86_64.tar.gz && \
+	tar -xvf /tmp/pact-1.61.2-linux-x86_64.tar.gz -C /opt && \
+    rm /tmp/pact-1.61.2-linux-x86_64.tar.gz
  
 COPY ./start.sh .
 RUN chmod +x start.sh
