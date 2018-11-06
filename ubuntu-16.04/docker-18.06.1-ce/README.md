@@ -5,6 +5,7 @@
 **Including:**
 * GitVersion 4.0.0
 * VIM Editor
+* Pact 1.61.2
 
 
 **GitVersion**
@@ -15,3 +16,9 @@ Application is installed in the following folder: /opt/GitVersion/GitVersion.dll
 
 You can use GitVersion by just type **dotnet /opt/GitVersion/GitVersion.dll** in the folder which contains a git repository.
 More information about GitVersion can be found [here](https://gitversion.readthedocs.io/en/latest/)
+
+
+**Pact**
+
+Application is installed in the following folder: /opt/pact
+More information about Pact can be found [here](https://github.com/pact-foundation/pact-ruby-standalone/releases)
