@@ -30,4 +30,4 @@ More information about Pact can be found [here](https://github.com/pact-foundati
 
 Application can be used by typing 'mongo'
 
-More information about [MongoDB shell](https://docs.mongodb.com/manual/mongo/index.html)
+More information about MongoDB shell can be found [here](https://docs.mongodb.com/manual/mongo/index.html)
