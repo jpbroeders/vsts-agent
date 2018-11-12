@@ -6,6 +6,7 @@
 * GitVersion 4.0.0
 * VIM Editor
 * Pact 1.61.2
+* Mongodb shell 2.6.10
 
 
 **GitVersion**
@@ -23,3 +24,9 @@ More information about GitVersion can be found [here](https://gitversion.readthe
 Application is installed in the following folder: /opt/pact
 
 More information about Pact can be found [here](https://github.com/pact-foundation/pact-ruby-standalone/releases)
+
+
+**MongoDB Shell**
+
+Application can be used by typing 'mongo'
+More information about [MongoDB shell](https://docs.mongodb.com/manual/mongo/index.html)
