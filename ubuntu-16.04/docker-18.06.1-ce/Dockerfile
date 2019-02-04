@@ -2,8 +2,12 @@ FROM microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
 MAINTAINER Jean-Pierre Broeders <github@freelyit.nl>
 
+# Update all existing packages to the latest version
+RUN apt-get update
+
+# Install latest Microsoft vsts agent
 RUN set -x \
- && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.140.2/vsts-agent-linux-x64-2.140.2.tar.gz -o agent.tgz \
+ && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.146.0/vsts-agent-linux-x64-2.146.0.tar.gz -o agent.tgz \
  && mkdir agent \
  && cd agent \
  && tar -xz --no-same-owner -f ../agent.tgz \
@@ -11,7 +15,7 @@ RUN set -x \
  && rm agent.tgz
 
 # Install GitVersion to /opt/GitVersion folder
-RUN apt-get update && apt-get install -y unzip mono-runtime libmono-system-core4.0-cil libgit2-24 && \
+RUN apt-get install -y unzip mono-runtime libmono-system-core4.0-cil libgit2-24 && \
     curl -L -o /tmp/GitVersion_4.0.0.zip https://github.com/GitTools/GitVersion/releases/download/v4.0.0/GitVersion-bin-coreclr-v4.0.0.zip && \
     unzip -d /opt/GitVersion /tmp/GitVersion_4.0.0.zip && \
     rm /tmp/GitVersion_4.0.0.zip && \
@@ -24,9 +28,18 @@ RUN apt-get install \
 	mongodb-clients
 	
 # Install Pact
-RUN curl -L -o /tmp/pact-1.61.2-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.61.2/pact-1.61.2-linux-x86_64.tar.gz && \
-	tar -xvf /tmp/pact-1.61.2-linux-x86_64.tar.gz -C /opt && \
-    rm /tmp/pact-1.61.2-linux-x86_64.tar.gz
+RUN curl -L -o /tmp/pact-1.63.0-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.63.0/pact-1.63.0-linux-x86_64.tar.gz && \
+	tar -xvf /tmp/pact-1.63.0-linux-x86_64.tar.gz -C /opt && \
+    rm /tmp/pact-1.63.0-linux-x86_64.tar.gz
+ 
+# Install .NET Core SDK 2.2
+RUN apt-get install -y --no-install-recommends \
+    apt-transport-https \
+    dotnet-sdk-2.2 \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf /etc/apt/sources.list.d/*
+RUN dotnet --info
+ENV dotnet=/usr/bin/dotnet
  
 COPY ./start.sh .
 RUN chmod +x start.sh

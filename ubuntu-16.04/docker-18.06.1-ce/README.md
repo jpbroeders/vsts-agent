@@ -1,11 +1,12 @@
 # Microsoft VSTS-Agent
 ## Based on microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
-
 **Including:**
+* Microsoft VSTS Agent 2.146.0
+* .NET Core SDK 2.2.1
 * GitVersion 4.0.0
 * VIM Editor
-* Pact 1.61.2
+* Pact 1.63.0
 * Mongodb shell 2.6.10
 
 
