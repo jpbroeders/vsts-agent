@@ -7,7 +7,7 @@ RUN apt-get update
 
 # Install latest Microsoft vsts agent
 RUN set -x \
- && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.146.0/vsts-agent-linux-x64-2.146.0.tar.gz -o agent.tgz \
+ && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.150.3/vsts-agent-linux-x64-2.150.3.tar.gz -o agent.tgz \
  && mkdir agent \
  && cd agent \
  && tar -xz --no-same-owner -f ../agent.tgz \
@@ -28,9 +28,9 @@ RUN apt-get install \
 	mongodb-clients
 	
 # Install Pact
-RUN curl -L -o /tmp/pact-1.63.0-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.63.0/pact-1.63.0-linux-x86_64.tar.gz && \
-	tar -xvf /tmp/pact-1.63.0-linux-x86_64.tar.gz -C /opt && \
-    rm /tmp/pact-1.63.0-linux-x86_64.tar.gz
+RUN curl -L -o /tmp/pact-1.66.0-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.66.0/pact-1.66.0-linux-x86_64.tar.gz && \
+	tar -xvf /tmp/pact-1.66.0-linux-x86_64.tar.gz -C /opt && \
+    rm /tmp/pact-1.66.0-linux-x86_64.tar.gz
  
 # Install .NET Core SDK 2.2
 RUN apt-get install -y --no-install-recommends \
