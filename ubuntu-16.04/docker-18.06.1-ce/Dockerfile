@@ -31,7 +31,11 @@ RUN apt-get install \
 RUN curl -L -o /tmp/pact-1.66.0-linux-x86_64.tar.gz https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.66.0/pact-1.66.0-linux-x86_64.tar.gz && \
 	tar -xvf /tmp/pact-1.66.0-linux-x86_64.tar.gz -C /opt && \
     rm /tmp/pact-1.66.0-linux-x86_64.tar.gz
- 
+
+# Install Clair-scanner v10
+RUN mkdir /opt/clair-scanner
+	&& curl -L -o /opt/clair-scanner https://github.com/arminc/clair-scanner/releases/download/v10/clair-scanner_linux_amd64 && chmod +x /opt/clair-scanner
+	
 # Install .NET Core SDK 2.2
 RUN apt-get install -y --no-install-recommends \
     apt-transport-https \

@@ -2,12 +2,13 @@
 ## Based on microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
 **Including:**
-* Microsoft VSTS Agent 2.146.0
+* Microsoft VSTS Agent 2.150.3
 * .NET Core SDK 2.2.1
 * GitVersion 4.0.0
 * VIM Editor
-* Pact 1.63.0
+* Pact 1.66.0
 * Mongodb shell 2.6.10
+* Clair-scanner 10
 
 
 **GitVersion**
@@ -32,3 +33,10 @@ More information about Pact can be found [here](https://github.com/pact-foundati
 Application can be used by typing 'mongo'
 
 More information about MongoDB shell can be found [here](https://docs.mongodb.com/manual/mongo/index.html)
+
+
+**Clair-scanner v10**
+
+Application is installed in the following folder: /opt/clair-scanner/clair-scanner
+
+More information about clair-scanner can be found [here](https://github.com/arminc/clair-scanner)
