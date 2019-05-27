@@ -34,7 +34,7 @@ RUN curl -L -o /tmp/pact-1.66.0-linux-x86_64.tar.gz https://github.com/pact-foun
 
 # Install Clair-scanner v10
 RUN mkdir /opt/clair-scanner \
-	&& curl -L -o /opt/clair-scanner https://github.com/arminc/clair-scanner/releases/download/v10/clair-scanner_linux_amd64 && chmod +x /opt/clair-scanner
+	&& curl -L -o /opt/clair-scanner/clair-scanner https://github.com/arminc/clair-scanner/releases/download/v10/clair-scanner_linux_amd64 && chmod +x /opt/clair-scanner/clair-scanner
 	
 # Install .NET Core SDK 2.2
 RUN apt-get install -y --no-install-recommends \
