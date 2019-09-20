@@ -2,18 +2,18 @@
 ## Based on microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
 
 **Including:**
-* Microsoft VSTS Agent 2.150.3
-* .NET Core SDK 2.2.1
-* GitVersion 4.0.0
+* Microsoft VSTS Agent 2.158.0
+* .NET Core SDK 2.2.402
+* GitVersion 5.0.1
 * VIM Editor
-* Pact 1.66.0
+* Pact 1.70.2
 * Mongodb shell 2.6.10
-* Clair-scanner 10
+* Clair-scanner 12
 
 
 **GitVersion**
 
-Contains the .NET Core version of GitVersion 4.0.0
+Contains the .NET Core version of GitVersion 5.0.1
 
 Application is installed in the following folder: /opt/GitVersion/GitVersion.dll
 
