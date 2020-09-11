@@ -13,7 +13,7 @@ RUN apt-get update
 
 # Install latest Microsoft vsts agent
 RUN set -x \
- && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.158.0/vsts-agent-linux-x64-2.158.0.tar.gz -o agent.tgz \
+ && curl -fSL https://vstsagentpackage.azureedge.net/agent/2.174.1/vsts-agent-linux-x64-2.174.1.tar.gz -o agent.tgz \
  && mkdir agent \
  && cd agent \
  && tar -xz --no-same-owner -f ../agent.tgz \
